@@ -1,0 +1,59 @@
+html{
+    background-color: red;
+}
+
+div#logo {
+    width: 281px;
+    height: 99px;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/200653/logo.png') no-repeat left top;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.pokemon-element{
+    position: relative;
+    display: inline-block;
+    width: 30vw;
+    height: 40vh;
+    background-color: darkred;
+    color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    margin: 5px 1vw;
+    padding: 30px 2px 0;
+    text-align: center;
+}
+
+.pokemon-img{
+    text-align: center;
+    width: 39%;
+    margin-bottom: -4px;
+    border: 1px solid red;
+}
+
+.pokemon-img-fail{
+    width: 50%;
+}
+
+.pokemon-name{
+    background-color: red;
+    width: 39%;
+    border: 1px solid red;
+    margin: 0 auto 10px;
+}
+
+.pokemon-type{
+    width: 50%;
+    margin: 0 auto;
+    color: red;
+    background-color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+}
+
+.pokemon-detail_link{
+    position: absolute;
+    bottom: 16px;
+    right: 21px;
+    color: #EEEEEE;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>List Pokemon</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'myApp/index.css' %}">
+<body>
+    <div id="logo"></div>
+    <div class="btn-container"><a href="http://127.0.0.1:8000/myApp/pokemon/equipe"><button>Regarder son equipe</button></a></div>
+    {% for pokemon in list_pokemon %}
+        <div class="pokemon-element">
+        {% if pokemon.link_img != None %}
+            <img src="{{ pokemon.link_img }}" class="pokemon-img">
+        {% else %}
+            <img src="https://i.ytimg.com/vi/lAEyTKiRhck/maxresdefault.jpg" alt="" class="pokemon-img-fail">
+        {% endif %}
+            <div class="pokemon-name">{{ pokemon.name }}</div>
+            <div class="pokemon-type">{{ pokemon.types }}</div>
+        <a href="http://127.0.0.1:8000/myApp/pokemon/equipe/add/{{ pokemon.name }}"><button>+</button></a>
+            <a href="http://127.0.0.1:8000/myApp/pokemon/{{ pokemon.name }}" class="pokemon-detail_link">Voir le détail</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
